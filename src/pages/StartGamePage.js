@@ -13,7 +13,7 @@ const StartGamePage = () => {
   }
   return (
     <div>
-      <input value="username" onChange={e => setUsername(e.target.value)}
+      <input value={username} onChange={e => setUsername(e.target.value)}
       placeholder="Username"
       />
       <button onClick={startGameHandler}>Start Game</button>

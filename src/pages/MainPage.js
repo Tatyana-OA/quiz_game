@@ -30,7 +30,7 @@ const MainPage = () => {
   }
 
   return (
-    <div>{displayedPage}</div>
+    <>{displayedPage}</>
   )
 }
 
