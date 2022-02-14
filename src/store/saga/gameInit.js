@@ -1,9 +1,15 @@
-import {take, fork} from 'redux-saga/effects';
+import { take, fork, put, call } from 'redux-saga/effects';
 import {startGame} from '../slices/gameInit';
+import {fetchQuizFromApi} from '../../utils/api'
 
 
 function* fetchQuestionsSaga() {
-    console.log('Fetching Questions')
+    try {
+        const data = yield call(fetchQuizFromApi);
+        console.log(data)
+    } catch(err) {
+
+    }
 }
 
 export default function* startGameSaga() {
