@@ -3,6 +3,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 import * as stages from '../../utils/constants';
+import {fetchQuestionsFail, fetchQuestionsSuccess} from './game'
 
 const initialState = {
     stage: stages.START_GAME,
@@ -17,6 +18,14 @@ const gameState = createSlice({
             state.username = action.payload.username;
             state.stage = stages.FETCHING_GAME;
         }
+    },
+    extraReducers: (builder) => {
+        builder
+        .addCase(fetchQuestionsSuccess, (state)=> {
+            state.stage = stages.GAME
+        }).addCase(fetchQuestionsFail, (state) => {
+            state.stage=stages.START_GAME
+        })
     }
 })
 
