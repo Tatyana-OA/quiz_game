@@ -15,7 +15,7 @@ export default function* gameSaga() {
     while(true) {
         yield take(fetchQuestionsSuccess.type);
         yield race({
-            delay: delay(2000),
+            delay: delay(60000),
             done: answersSaga()
         })
 
