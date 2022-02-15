@@ -30,7 +30,9 @@ const MainPage = () => {
   }
 
   return (
-    <>{displayedPage}</>
+    <div className="font-mono bg-purple-50 min-h-screen">
+      <h1 className="bg-purple-500 text-white p-4 text-2xl text-center uppercase">Redux Saga Quiz Game by TVass.</h1>
+      {displayedPage}</div>
   )
 }
 
