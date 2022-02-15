@@ -18,7 +18,7 @@ const StartGamePage = () => {
       placeholder="Username"
       className="py-2 px-4 outline-none rouded shadow w-64 mb-6"
       />
-      <Button>Start Game</Button>
+      <Button onClick={startGameHandler}> Start Game</Button>
      </div>
   )
 }
