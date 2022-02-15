@@ -23,7 +23,7 @@ const quizSlice = createSlice({
         },
         answerQuestion(state, action) {
             const currentQuestion = state.questions[state.currentQuestionIndex];
-            state.score += action.payload.asnwer == currentQuestion.correct_answer ? 1 : 0;
+            state.score += action.payload.answer == currentQuestion.correct_answer ? 1 : 0;
         },
         nextQuestion(state, action ) {
             state.currentQuestionIndex +=1;
